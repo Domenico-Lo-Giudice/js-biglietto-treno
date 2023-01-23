@@ -14,24 +14,29 @@ let age = parseInt(prompt("Quanti anni hai?"));
 console.log(age);
 
 // DEFINISCI PREZZO BIGLIETTO
-let ticketPrice = (0.21 * km);
-console.log(ticketPrice);
+let ticketPrice = (0.21 * km).toFixed(2);
+
+let FinalPrice20 = (ticketPrice - (20 / 100) * (ticketPrice)).toFixed(2);
+
+let FinalPrice40 = (ticketPrice - (40 / 100) * (ticketPrice)).toFixed(2);
 
 // SE LA PERSONA E' MINORENNE
 if (age < 18) {
     // APPLICA SCONTO 20%
-    alert(ticketPrice - (20 / 100) * (ticketPrice)); 
+    alert(FinalPrice20); 
+    document.getElementById(`prezzo_finale`).innerHTML = FinalPrice20;
 }
 
 else if (age > 65) {
     // APPLICA SCONTO 40%
-    alert(ticketPrice - (40 / 100) * (ticketPrice));
+    alert(FinalPrice40);
+    document.getElementById(`prezzo_finale`).innerHTML = FinalPrice40;
 }
 // ALTRIMENTI
 else {
     // PREZZO NORMALE
     alert(ticketPrice);
+    document.getElementById(`prezzo_finale`).innerHTML = ticketPrice;
 }
 
-// Output del prezzo finale con massimo due decimali
-document.getElementById(`prezzo_finale`).innerHTML = (ticketPrice).toFixed(2);
+

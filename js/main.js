@@ -14,32 +14,40 @@ let age = parseInt(prompt("Quanti anni hai?"));
 console.log(age);
 
 // DEFINISCI PREZZO BIGLIETTO
-let ticketPrice = (0.21 * km).toFixed(2);
+let ticketPrice = (0.21 * km);
 
-let FinalPrice20 = (ticketPrice - (20 / 100) * (ticketPrice)).toFixed(2);
+let FinalPrice20 = (ticketPrice - (20 / 100) * (ticketPrice));
 
-let FinalPrice40 = (ticketPrice - (40 / 100) * (ticketPrice)).toFixed(2);
+let FinalPrice40 = (ticketPrice - (40 / 100) * (ticketPrice));
+
+// DECIMALE PREZZO FINALE
+let ticketPriceFixed = ticketPrice.toFixed(2);
+
+let FinalPrice20Fixed = FinalPrice20.toFixed(2);
+
+let FinalPrice40Fixed = FinalPrice40.toFixed(2);
+
 
 // SE LA PERSONA E' MINORENNE
 if (age < 18) {
     // APPLICA SCONTO 20%
     alert("Il nuovo prezzo del biglietto scontato al 20% è di: " + FinalPrice20 + "€"); 
     // OUTPUT PREZZO FINALE CON MASSIMO DUE DECIMALI
-    document.getElementById(`prezzo_finale`).innerHTML = "Il prezzo finale del biglietto è di " + FinalPrice20 + "€";
+    document.getElementById(`prezzo_finale`).innerHTML = "Il prezzo finale del biglietto è di " + FinalPrice20Fixed + "€";
 }
 
 else if (age > 65) {
     // APPLICA SCONTO 40%
     alert("Il nuovo prezzo del biglietto scontato al 40% è di: " + FinalPrice40 + "€");
     // OUTPUT PREZZO FINALE CON MASSIMO DUE DECIMALI
-    document.getElementById(`prezzo_finale`).innerHTML = "Il prezzo finale del biglietto è di " + FinalPrice40 + "€";
+    document.getElementById(`prezzo_finale`).innerHTML = "Il prezzo finale del biglietto è di " + FinalPrice40Fixed + "€";
 }
 // ALTRIMENTI
 else {
     // PREZZO NORMALE
     alert("Il prezzo del biglietto è di: " + ticketPrice + "€");
     // OUTPUT PREZZO FINALE CON MASSIMO DUE DECIMALI
-    document.getElementById(`prezzo_finale`).innerHTML = "Il prezzo finale del biglietto è di " + ticketPrice + "€";
+    document.getElementById(`prezzo_finale`).innerHTML = "Il prezzo finale del biglietto è di " + ticketPriceFixed + "€";
 }
 
 

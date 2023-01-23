@@ -31,21 +31,21 @@ let FinalPrice40Fixed = FinalPrice40.toFixed(2);
 // SE LA PERSONA E' MINORENNE
 if (age < 18) {
     // APPLICA SCONTO 20%
-    alert("Il nuovo prezzo del biglietto scontato al 20% è di: " + FinalPrice20 + "€"); 
+    alert("Il nuovo prezzo del biglietto scontato al 20% è di: " + FinalPrice20Fixed + "€"); 
     // OUTPUT PREZZO FINALE CON MASSIMO DUE DECIMALI
     document.getElementById(`prezzo_finale`).innerHTML = "Il prezzo finale del biglietto è di " + FinalPrice20Fixed + "€";
 }
 
 else if (age > 65) {
     // APPLICA SCONTO 40%
-    alert("Il nuovo prezzo del biglietto scontato al 40% è di: " + FinalPrice40 + "€");
+    alert("Il nuovo prezzo del biglietto scontato al 40% è di: " + FinalPrice40Fixed + "€");
     // OUTPUT PREZZO FINALE CON MASSIMO DUE DECIMALI
     document.getElementById(`prezzo_finale`).innerHTML = "Il prezzo finale del biglietto è di " + FinalPrice40Fixed + "€";
 }
 // ALTRIMENTI
 else {
     // PREZZO NORMALE
-    alert("Il prezzo del biglietto è di: " + ticketPrice + "€");
+    alert("Il prezzo del biglietto è di: " + ticketPriceFixed + "€");
     // OUTPUT PREZZO FINALE CON MASSIMO DUE DECIMALI
     document.getElementById(`prezzo_finale`).innerHTML = "Il prezzo finale del biglietto è di " + ticketPriceFixed + "€";
 }

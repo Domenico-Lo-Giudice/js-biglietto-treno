@@ -33,3 +33,5 @@ else {
     alert(ticketPrice);
 }
 
+// Output del prezzo finale con massimo due decimali
+document.getElementById(`prezzo_finale`).innerHTML = (ticketPrice).toFixed(2);
